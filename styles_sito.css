@@ -1,0 +1,205 @@
+/* Impostazioni per il video di sfondo */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Mantiene il video dietro al contenuto */
+    overflow: hidden;
+}
+
+video {
+    object-fit: cover; /* Adatta il video per coprire l'intero schermo */
+    width: 100%;
+    height: 100%;
+}
+
+/* Stili per il contenuto */
+.content {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(251, 251, 252);
+    text-align: center;
+    z-index: 1; /* Garantisce che il contenuto sia sopra il video */
+}
+
+/* Stili per l'header */
+.header {
+    font-family: 'Pacifico';
+    font-size: 5em;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin-bottom: 40px; /* Distanza tra l'header e le immagini */
+}
+
+/* Container per le immagini affiancate */
+.images-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Distanza tra le immagini */
+}
+
+.image-box {
+    width: 300px; /* Dimensione fissa per ogni immagine */
+    height: 200px; /* Dimensione fissa per ogni immagine */
+    overflow: hidden;
+    border-radius: 8px; /* Bordo arrotondato per un look più morbido */
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Rende le immagini adattabili senza distorsioni */
+    border-radius: 8px; /* Bordo arrotondato anche per le immagini */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #f0f0f0; /* Colore di sfondo neutro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Stili per l'H1 */
+h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    color: transparent; /* Colore trasparente per il gradiente */
+    background: linear-gradient(to right, #213ce9, #21d0dc); 
+    -webkit-background-clip: text; /* Applica il gradiente solo al testo */
+    background-clip: text; /* Necessario anche per i browser non-Webkit */
+    text-transform: uppercase; /* Trasforma il testo in maiuscolo */
+    letter-spacing: 2px; /* Spaziatura tra le lettere */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Ombra sul testo */
+    transition: all 0.3s ease; /* Transizione per gli effetti */
+}
+
+/* Aggiungere l'effetto hover */
+h1:hover {
+    color: #3c4ae7; /* Cambia il colore al passaggio del mouse */
+    transform: scale(1.1); /* Aumenta la dimensione del testo */
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Ombra più grande */
+}
+
+/* Animazione di rimbalzo al caricamento */
+h1 {
+    animation: bounce 1s ease infinite; /* L'animazione di rimbalzo */
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Posizione normale */
+    }
+    50% {
+        transform: translateY(-20px); /* Si sposta verso l'alto */
+    }
+}
+
+/* Stili per la barra di navigazione (menu principale) */
+.navbar {
+    background-color: #f8ab13;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Mantiene la barra sopra al contenuto */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Spaziatura interna */
+}
+
+/* Menu principale */
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Allinea verticalmente le voci del menu */
+    width: 100%;
+    justify-content: space-evenly; /* Equidistribuisce gli elementi */
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Colore di hover per i link principali */
+.menu a:hover {
+    background-color: #575757;
+}
+
+/* Stile per il logo */
+.logo {
+    position: absolute; /* Posiziona il logo nel centro del menu */
+    left: 48%;
+    transform: translateX(-50%); /* Centra il logo orizzontalmente */
+}
+
+.logo-img {
+    width: 50px; /* Imposta la larghezza del logo */
+    height: 50px; /* Imposta l'altezza del logo */
+}
+
+/* Aggiungi il comportamento al passaggio del mouse */
+.logo-img:hover {
+    opacity: 0.8; /* Diminuisci l'opacità del logo al passaggio del mouse */
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Mantiene tutto al centro */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Stili per la sezione contatti (ora sarà sicuramente sotto le immagini) */
+.contact-info {
+    margin-top: 40px; /* Aggiunge spazio tra immagini e contatti */
+    font-size: 1.2em;
+    color: white;
+    width: fit-content; /* Adatta il contenuto */
+}
+
+/* Stili per email e telefono */
+.contact-info a {
+    color: #21d0dc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.phone-number {
+    font-weight: bold;
+    color: #ffcc00;
+}
